@@ -42,6 +42,7 @@ public class Camera extends Mechanism {
     aprilTagLayout = AprilTagFieldLayout.loadField(VisionConstants.APRILTAG_FIELD);
     fieldWidth = aprilTagLayout.getFieldWidth();
     fieldLength = aprilTagLayout.getFieldLength();
+    this.setDefaultCommand(this.periodic());
   }
 
   public Command periodic() {

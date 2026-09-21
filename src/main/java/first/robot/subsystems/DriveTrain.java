@@ -146,6 +146,7 @@ public class DriveTrain extends Mechanism
     compositeVisionPose = new Pose2d();
     lastVisionUpdate = 0;
     isVisionValid = true;
+    this.setDefaultCommand(this.periodic());
   }
 
   public Command periodic()
